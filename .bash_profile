@@ -27,6 +27,14 @@ export HISTSIZE=10000
 export HISTCONTROL=erasedups
 export PROMPT_COMMAND="history -a"
 shopt -s histappend
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+
+# show possibilities if tab ambigious
+set show-all-if-ambiguous on
+# ignore case when completing, lets see how it works
+set completion-ignore-case on
+
 # -----------------------------
 
 #   -------------------------------
